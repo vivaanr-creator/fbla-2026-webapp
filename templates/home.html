@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <section class="county-hero">
+    <img class="hero-image" src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2200&q=85" alt="Placeholder landscape for [County Name]" fetchpriority="high">
+    <div class="hero-shade"></div>
+    <div class="hero-content">
+      <p class="eyebrow">Welcome to Forysth County</p>
+      <h1>Find your kind of <em>somewhere.</em></h1>
+      <p>Homepage welcome copy goes here. Share what makes this county worth a visit.</p>
+      <a class="visitor-button" href="{{ url_for('explore') }}">Start exploring <span aria-hidden="true">&#8594;</span></a>
+    </div>
+    <span class="image-placeholder-note">Homepage image placeholder</span>
+  </section>
+
+  <section class="home-intro page-width">
+    <div>
+      <p class="eyebrow">A place to make your own</p>
+      <h2>Your next favorite place is waiting.</h2>
+    </div>
+    <p>Use this space for a short introduction to the county, the people who call it home, and the moments visitors can find here.</p>
+  </section>
+
+  <section class="photo-row page-width" aria-label="Explore and experience Forysth County">
+    <a class="photo-card" href="{{ url_for('explore') }}">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1100&q=80" alt="Placeholder image for places to explore" loading="lazy">
+      <span class="photo-caption"><small>EXPLORE</small><strong>Places to go</strong></span>
+    </a>
+    <a class="photo-card" href="{{ url_for('experience') }}">
+      <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1100&q=80" alt="Placeholder image for local experiences" loading="lazy">
+      <span class="photo-caption"><small>EXPERIENCE</small><strong>Things to do</strong></span>
+    </a>
+  </section>
+{% endblock %}

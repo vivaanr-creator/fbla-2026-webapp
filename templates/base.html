@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173c36">
+  <title>{{ title }} | Explore FoCo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <script src="{{ url_for('static', filename='js/menu.js') }}" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navigation" aria-label="Main navigation">
+      <a class="brand" href="{{ url_for('home') }}" aria-label="Forsyth County visitor guide home">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        <span>Forsyth County <strong>Visitor Guide</strong></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="menu" id="site-menu">
+        <a href="{{ url_for('home') }}" {% if active_page == 'home' %}aria-current="page"{% endif %}>Home</a>
+        <a href="{{ url_for('explore') }}" {% if active_page == 'explore' %}aria-current="page"{% endif %}>Explore</a>
+        <a href="{{ url_for('experience') }}" {% if active_page == 'experience' %}aria-current="page"{% endif %}>Experience</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width footer-inner">
+      <span>Explore FoCo</span>
+      <span>Plan your next visit to the Lanier County.</span>
+    </div>
+  </footer>
+</body>
+</html>
