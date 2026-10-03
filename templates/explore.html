@@ -1,11 +1,21 @@
 {% extends "base.html" %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/explore.css') }}">
+{% endblock %}
+{% block content %}
+<section class="explore-banner">
+    <p class="eyebrow">ATLANTA METRO AREA</p>
 
-  <section class="explore-banner">
-  <p class="eyebrow">ATLANTA METRO AREA</p>
-  <h1>Explore Atlanta</h1>
-   <h2>Discover the Heart of the South</h2>
-    <p>Discover Atlanta's parks, culture, attractions, and history across the city and surrounding metro area.</p>
-  </section>
+    <h1>Explore Atlanta</h1>
+
+    <h2>Discover the Heart of the South</h2>
+
+    <p class="banner-description">
+        Discover Atlanta's parks, culture, attractions, and history across the city and surrounding metro area.
+    </p>
+</section>
+{% endblock %}
+
   
 
 
