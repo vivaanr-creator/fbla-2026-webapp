@@ -45,3 +45,7 @@
   </footer>
 </body>
 </html>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+{% block extra_css %}{% endblock %}
+<script src="{{ url_for('static', filename='js/menu.js') }}" defer></script>
