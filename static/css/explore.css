@@ -7,5 +7,7 @@
   align-items:center;
   text-align:center;
 
-  background-image: url("/static/images/atlanta.jpg");
+  background-image: url("/static/images/exploreatlantabanner.jpg");
+  background-size: cover;
+  
 }
