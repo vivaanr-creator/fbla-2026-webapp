@@ -1,54 +1,55 @@
 {% extends "base.html" %}
+
 {% block extra_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/explore.css') }}">
-{% endblock %}
-{% block content %}
-<section class="explore-banner">
-    <p class="eyebrow">ATLANTA METRO AREA</p>
-
-    <h1>Explore Atlanta</h1>
-
-    <h2>Discover the Heart of the South</h2>
-
-    <p class="banner-description">
-        Discover Atlanta's parks, culture, attractions, and history across the city and surrounding metro area.
-    </p>
-</section>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/explore.css') }}">
 {% endblock %}
 
-  
-
-
-
 {% block content %}
-  <section class="featured attractions">
-    <h3>Featured Attractions</h3>
-    <div class="featured-attractions-cards">
-      <p class="eyebrow">Parks and Nature</p>
-      <h4>Piedmont Park: Where Nature meets Recreation</h4>
-      <p>Immerse yourself in Atlanta's nature through scenic lake views, vibrant botanical spaces, and plenty of trails to absorb yourself in the great outdoors.  </p>
-      <button class="link-subpages">Learn More</button>
-      <figure class="placeholder-photo">
-      <img src=">
+  <section class="explore-banner" aria-labelledby="explore-title">
+    <div class="explore-banner-content">
+      <p class="eyebrow">Atlanta Metro Area</p>
+      <h1 id="explore-title">Explore Atlanta</h1>
+      <h2>Discover the Heart of the South</h2>
+      <p class="banner-description">Discover Atlanta's parks, culture, attractions, and history across the city and surrounding metro area.</p>
     </div>
+  </section>
+
+  <section class="featured-attractions page-width" aria-labelledby="attractions-title">
+    <div class="featured-heading">
+      <p class="eyebrow">Make a day of it</p>
+      <h2 id="attractions-title">Featured Attractions</h2>
     </div>
-     <div class="featured-attractions-cards">
-      <p class="eyebrow">Art and Culture</p>
-      <h5>The High Museum of Art: Atlanta's Artistic Hub</h5>
-      <p>Unearth a world of creativity at the High where inspiring exhibitions, vibrant collections, and lively shows help bring Atlanta's art history to life.  </p>
-      <button class="link-subpages">Learn More</button>
-        <figure class="placeholder-photo">
-      <img src=">
+
+    <div class="featured-attractions-grid">
+      <article class="featured-attraction">
+        <img src="{{ url_for('static', filename='images/exploreatlantabannerimage.jpg') }}" alt="Placeholder landscape for Piedmont Park" loading="lazy">
+        <div class="featured-attraction-copy">
+          <p class="eyebrow">Parks and Nature</p>
+          <h3>Piedmont Park: Where Nature Meets Recreation</h3>
+          <p>Take in scenic lake views, botanical spaces, and trails in one of Atlanta's favorite green spaces.</p>
+          <a class="link-subpages" href="{{ url_for('experience') }}">Learn more <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </article>
+
+      <article class="featured-attraction">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Placeholder image for Atlanta art and culture" loading="lazy">
+        <div class="featured-attraction-copy">
+          <p class="eyebrow">Art and Culture</p>
+          <h3>The High Museum of Art: Atlanta's Artistic Hub</h3>
+          <p>Explore exhibitions, collections, and programs at one of the region's leading art museums.</p>
+          <a class="link-subpages" href="{{ url_for('experience') }}">Learn more <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </article>
+
+      <article class="featured-attraction">
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80" alt="Placeholder image for Atlanta history and heritage" loading="lazy">
+        <div class="featured-attraction-copy">
+          <p class="eyebrow">History and Heritage</p>
+          <h3>Atlanta History Center: Step into the Past</h3>
+          <p>Discover the people, places, and stories that shaped Atlanta and the surrounding region.</p>
+          <a class="link-subpages" href="{{ url_for('experience') }}">Learn more <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </article>
     </div>
-    </div>
-     <div class="featured-attractions-cards">
-      <p class="eyebrow">History and Heritage</p>
-      <h6>Atlanta History Center:Step into the Past</h6>
-      <p>Discover Atlanta's  </p>
-      <button class="link-subpages">Learn More</button>
-        <figure class="placeholder-photo">
-      <img src=">
-    </div>
-    </figure>
   </section>
 {% endblock %}
