@@ -1,13 +1,115 @@
-.explore-banner{
- min-height:420px;
-  padding:80px 8%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
+.explore-banner {
+  min-height: 420px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 80px 8%;
+  background: #28463e;
+  color: #fff;
+  text-align: center;
+}
 
-  background-image: url("/static/images/exploreatlantabanner.jpg");
-  background-size: cover;
-  
+.explore-banner::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(17 42 36 / 75%), rgb(17 42 36 / 40%)), url("/static/images/exploreatlantabannerimage.jpg") center / cover;
+  content: "";
+}
+
+.explore-banner-content { max-width: 760px; }
+.explore-banner .eyebrow { color: #d7e78d; }
+
+.explore-banner h1 {
+  margin: 0;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+.explore-banner h2 {
+  margin: 14px 0 0;
+  color: #f0cf79;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.banner-description {
+  max-width: 600px;
+  margin: 18px auto 0;
+  color: #f0f2e9;
+  line-height: 1.7;
+}
+
+.featured-attractions { padding-block: 68px 88px; }
+.featured-heading { margin-bottom: 28px; }
+.featured-heading .eyebrow { margin-bottom: 10px; }
+.featured-heading h2 { font-size: 2.5rem; }
+
+.featured-attractions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.featured-attraction {
+  overflow: hidden;
+  border: 1px solid #dce2d8;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.featured-attraction > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.featured-attraction-copy { padding: 20px; }
+.featured-attraction-copy .eyebrow { margin-bottom: 9px; }
+
+.featured-attraction h3 {
+  margin: 0;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.featured-attraction-copy > p:not(.eyebrow) {
+  min-height: 5.1em;
+  margin: 12px 0 18px;
+  color: #65716b;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.link-subpages {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #285b4e;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration-color: #df6548;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 900px) {
+  .featured-attractions-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 620px) {
+  .explore-banner { min-height: 360px; padding: 60px 20px; }
+  .explore-banner h1 { font-size: 3rem; }
+  .explore-banner h2 { font-size: 1.35rem; }
+  .featured-attractions { padding-block: 52px 64px; }
+  .featured-heading h2 { font-size: 2.1rem; }
+  .featured-attractions-grid { grid-template-columns: 1fr; }
+  .featured-attraction-copy > p:not(.eyebrow) { min-height: 0; }
 }
