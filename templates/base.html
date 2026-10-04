@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  {% block extra_css %}{% endblock %}
   <script src="{{ url_for('static', filename='js/menu.js') }}" defer></script>
 </head>
 <body>
@@ -16,7 +17,7 @@
     <nav class="navigation" aria-label="Main navigation">
       <a class="brand" href="{{ url_for('home') }}" aria-label="Forsyth County visitor guide home">
         <span class="brand-mark" aria-hidden="true">C</span>
-        <span>Visit ATL</span>
+        <span>Forsyth County <strong>Visitor Guide</strong></span>
       </a>
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation menu">
@@ -39,13 +40,9 @@
 
   <footer class="site-footer">
     <div class="page-width footer-inner">
-      <span>Explore Atlanta</span>
+      <span>Explore FoCo</span>
       <span>Plan your next visit to the Lanier County.</span>
     </div>
   </footer>
 </body>
 </html>
-
-<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-{% block extra_css %}{% endblock %}
-<script src="{{ url_for('static', filename='js/menu.js') }}" defer></script>
