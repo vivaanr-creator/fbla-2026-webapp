@@ -440,10 +440,6 @@ button:focus-visible, input:focus-visible, a:focus-visible {
 
 .hero-image { object-fit: cover; }
 
-.hero-shade {
-  background: linear-gradient(90deg, rgb(17 42 36 / 82%) 0%, rgb(17 42 36 / 54%) 52%, rgb(17 42 36 / 8%) 100%);
-}
-
 .hero-content {
   position: relative;
   width: min(1120px, calc(100% - 64px));
@@ -633,7 +629,6 @@ button:focus-visible, input:focus-visible, a:focus-visible {
   .hero-content { width: calc(100% - 40px); padding-block: 90px; }
   .county-hero { min-height: 610px; }
   .county-hero h1 { font-size: 3.15rem; }
-  .hero-shade { background: linear-gradient(90deg, rgb(17 42 36 / 80%), rgb(17 42 36 / 34%)); }
   .home-intro h2 { font-size: 2.35rem; }
   .photo-row { grid-template-columns: 1fr; gap: 16px; padding-bottom: 60px; }
   .photo-card { min-height: 260px; }
