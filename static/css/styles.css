@@ -431,6 +431,11 @@ button:focus-visible, input:focus-visible, a:focus-visible {
   color: var(--white);
 }
 
+.hero-shade  {
+  background: #000000;
+  opacity: 0.25;
+}
+
 .hero-image, .hero-shade {
   position: absolute;
   inset: 0;
