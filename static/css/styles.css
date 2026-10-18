@@ -436,15 +436,15 @@ button:focus-visible, input:focus-visible, a:focus-visible {
   inset: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
-
-.hero-image { object-fit: cover; }
 
 .hero-content {
   position: relative;
-  width: min(1120px, calc(100% - 64px));
-  margin-inline: auto;
-  padding-block: 110px;
+  z-index: 1;
+  max-width: 600px;
+  padding: 40px;
 }
 
 .hero-content .eyebrow { color: var(--lime); }
