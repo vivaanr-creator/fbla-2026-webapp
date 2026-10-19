@@ -1,3 +1,4 @@
+
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -26,8 +27,9 @@ def festivals():
         active_page="festivals",
     )
 
+
 @app.get("/stay")
-def festivals():
+def stay():
     return render_template(
         "stay.html",
         title="Stay",
