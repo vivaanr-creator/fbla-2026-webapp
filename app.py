@@ -18,5 +18,22 @@ def experience():
     return render_template("experience.html", title="Experience", active_page="experience")
 
 
+@app.get("/festivals")
+def festivals():
+    return render_template(
+        "festivals.html",
+        title="Festivals and Shows",
+        active_page="festivals",
+    )
+
+@app.get("/stay")
+def festivals():
+    return render_template(
+        "stay.html",
+        title="Stay",
+        active_page="stay",
+    )
+
+
 if __name__ == "__main__":
     app.run(debug=True)
