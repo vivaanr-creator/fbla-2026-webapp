@@ -14,25 +14,79 @@
 </head>
 <body>
   <header class="site-header">
-    <nav class="navigation" aria-label="Main navigation">
-      <a class="brand" href="{{ url_for('home') }}" aria-label="Forsyth County visitor guide home">
-        <span class="brand-mark" aria-hidden="true">C</span>
-      </a>
-      
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+    <nav>
+  <a href="#home">Home</a>
 
-      <div class="menu" id="site-menu">
-        <a href="{{ url_for('home') }}" {% if active_page == 'home' %}aria-current="page"{% endif %}>Home</a>
-        <a href="{{ url_for('explore') }}" {% if active_page == 'explore' %}aria-current="page"{% endif %}>Explore</a>
-        <a href="{{ url_for('experience') }}" {% if active_page == 'experience' %}aria-current="page"{% endif %}>Experience</a>
-        <a href="{{ url_for('festivals') }}" {% if active_page == 'festivals' %}aria-current="page"{% endif %}>Festivals and Shows</a>
-        <a href="{{ url_for('stay') }}" {% if active_page == 'stay' %}aria-current="page"{% endif %}>Stay</a>
-      </div>
-    </nav>
+  <div class="dropdown">
+    <a href="#learn-more">Learn More ▾</a>
+    <div class="dropdown-content">
+      <a href="#places-to-go">Places to Go</a>
+      <a href="#things-to-do">Things to Do</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <a href="#events">Events ▾</a>
+    <div class="dropdown-content">
+      <a href="#trending">Trending</a>
+      <a href="#upcoming-events">Upcoming Events</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <a href="#stay">Stay ▾</a>
+    <div class="dropdown-content">
+      <a href="#plan-your-trip">Plan Your Trip</a>
+      <a href="#where-to-stay">Where to Stay</a>
+      <a href="#visitor-information">Visitor Information</a>
+      <a href="#travel-tips">Travel Tips</a>
+    </div>
+  </div>
+</nav>
+<script>
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background-color: #001470;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  nav a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: white;
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background: #001470;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+  }
+
+  .dropdown-content a {
+    white-space: nowrap;
+  }
+
+  .dropdown-content a:hover {
+    background: #102580;
+  }
+
+  .dropdown:hover .dropdown-content,
+  .dropdown:focus-within .dropdown-content {
+    display: block;
+  }
+</script>
   </header>
 
   <main>
