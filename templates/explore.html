@@ -5,12 +5,19 @@
 {% endblock %}
 
 {% block content %}
-  <section class="explore-banner" aria-labelledby="explore-title">
+<section class="explore-banner" aria-labelledby="explore-title">
     <div class="explore-banner-content">
       <p class="eyebrow">Atlanta Metro Area</p>
       <h1 id="explore-title">Explore Atlanta</h1>
       <h2>Discover the Heart of the South</h2>
       <p class="banner-description">Discover Atlanta's parks, culture, attractions, and history across the city and surrounding metro area.</p>
+    </div>
+  </section>
+
+  <section class="interactive-map">
+    <div class="map-title">
+      <h2>Explore the big ATL</h2>
+      <p>Explore the city and surrounding areas with our interactive map, highlighting key attractions and points of interest.</p>
     </div>
   </section>
 
@@ -22,7 +29,7 @@
 
     <div class="featured-attractions-grid">
       <article class="featured-attraction">
-        <img src="{{ url_for('static', filename='images/attraction1new.jpg') }}"
+        <img src="{{ url_for('static', filename='images/attraction1.jpg') }}"
      alt="Piedmont Park with greenery and the Atlanta skyline"
      loading="lazy">
         <div class="featured-attraction-copy">
@@ -34,7 +41,9 @@
       </article>
 
       <article class="featured-attraction">
-        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Placeholder image for Atlanta art and culture" loading="lazy">
+        <img src="{{ url_for('static', filename='images/attraction2.jpg') }}"
+     alt="The High Museum of Art with its distinctive architecture"
+     loading="lazy">
         <div class="featured-attraction-copy">
           <p class="eyebrow">Art and Culture</p>
           <h3>The High Museum of Art: Atlanta's Artistic Hub</h3>
@@ -44,11 +53,25 @@
       </article>
 
       <article class="featured-attraction">
-        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80" alt="Placeholder image for Atlanta history and heritage" loading="lazy">
+        <img src="{{ url_for('static', filename='images/attraction3.jpg') }}"
+     alt="Atlanta History Center with its historic architecture"
+     loading="lazy">
         <div class="featured-attraction-copy">
           <p class="eyebrow">History and Heritage</p>
           <h3>Atlanta History Center: Step into the Past</h3>
           <p>Discover the people, places, and stories that shaped Atlanta and the surrounding region.</p>
+          <a class="link-subpages" href="{{ url_for('experience') }}">Learn more <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </article>
+
+      <article class="featured-attraction">
+        <img src="{{ url_for('static', filename='images/attraction4.jpg') }}"
+     alt="Six Flags Over Georgia with its colorful signage"
+     loading="lazy">
+        <div class="featured-attraction-copy">
+          <p class="eyebrow">Theme Parks and Attractions</p>
+          <h3>Six Flags Over Georgia:</h3>
+          <p>Experience thrilling rides and attractions in one of the most popular theme parks in the area.</p>
           <a class="link-subpages" href="{{ url_for('experience') }}">Learn more <span aria-hidden="true">&#8594;</span></a>
         </div>
       </article>
