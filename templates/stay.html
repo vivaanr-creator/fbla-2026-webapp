@@ -1,0 +1,20 @@
+{extends "base.html" %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/festivals.css') }}">
+{% endblock %}
+
+{% block content %}
+  <section class="placeholder-page page-width">
+    <div class="placeholder-copy">
+      <p class="eyebrow">Stay</p>
+      <h1>Celebrate the Spirit of Atlanta</h1>
+      <p>Placeholder text for the best lodging in the big ATL.</p>
+      <span class="placeholder-label">Page copy placeholder</span>
+    </div>
+    <figure class="placeholder-photo">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=85" alt="Placeholder landscape for festivals and shows in Atlanta">
+      <figcaption>Image placeholder: replace with a local hotel</figcaption>
+    </figure>
+  </section>
+{% endblock %}
